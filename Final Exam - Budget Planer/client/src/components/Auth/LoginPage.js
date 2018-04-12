@@ -53,7 +53,7 @@ class LoginPage extends Component {
             <div className="container">
                 <div className="row space-top">
                     <div className="col-md-12">
-                        <h1>Login</h1>
+                        <h1>Login here</h1>
                     </div>
                 </div>
                 <form onSubmit={this.onSubmitHandler}>
