@@ -59,6 +59,7 @@ class ExpenseList extends Component {
                         category={e.category}
                         amount={Number(e.amount)}
                         date={e.date}
+                        month={e.month}
                     />
                 })}
             </tbody>

@@ -44,6 +44,8 @@ class LoginPage extends Component {
                 localStorage.setItem('name', res.user.name);
                 toastr.success('Login successful!');
                 this.props.history.push(`/monthly/${currentMonth}`);
+            }else{
+                toastr.error('Invalid username or password');
             }
         })
     }

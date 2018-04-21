@@ -1,14 +1,16 @@
 a.nav-link {
     display: inline-block;
-    color: rgb(255, 255, 255, 0.75);
+    color: rgba(15, 53, 244, 0.946);
 }
 
 a.nav-link:hover {
-    color: white;
+    color: rgb(11, 241, 95);
+    text-decoration: underline;
 }
 
 a.nav-link.active {
-    color: white;
+    color: rgb(252, 9, 9);
+    text-decoration: underline;
 }
 
 .space-top {
@@ -42,9 +44,125 @@ th, td{
 }
 
 .bg-secondary {
-    color: #666666 !important ;
+    color: #3cb521 !important;
+    font-size: 18px;
+    font-weight: 600;
     background-color: wheat !important;
 }
 body{
-    background-color: beige
+    background-color: beige;
+    min-height:100vh !important;
 }
+#root{
+    min-height: 100vh !important;
+}
+.App{
+    min-height: 100vh !important;
+    
+}
+
+
+.header-row{
+    font-size: 21px;
+}
+.footer{
+    background-color: rgb(180, 179, 245) !important;
+    height: 5vh;
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 90%;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer p{
+    margin-bottom: 0;
+}
+#deleteBtn{
+    width: 35px;
+    height: 20px;
+}
+#addBtn{
+    width: 30px;
+}
+.userName{
+    color: blue;
+    font-size: 21px;
+}
+.logout{
+    font-size: 21px;
+}
+.welcomeMessage{
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+}
+.login{
+    font-size: 21px;
+}
+.register{
+    font-size: 21px;
+}
+.danger{
+    padding: 0.5em 1.5em !important;
+}
+.alert{
+    padding: 0;
+    margin: 0;
+    border-radius: 1.25rem;
+}
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+/* DeleteButton */
+[data-title]:after {
+    content: attr(data-title);
+    background-color: red;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: -200%;
+    -webkit-box-shadow: 1px 1px 3px #222222;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99998;
+    word-wrap: break-word;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
+}
+/* AddButton */
+[data-title-add]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title-add]:after {
+    content: attr(data-title-add);
+    background-color: green;
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: -100%;
+    -webkit-box-shadow: 1px 1px 3px #222222;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    word-wrap: break-word;
+    visibility: hidden;
+}
+[data-title-add] {
+    position: relative;
+}
+
+    

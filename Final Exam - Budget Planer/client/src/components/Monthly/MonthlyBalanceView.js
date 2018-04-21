@@ -12,7 +12,8 @@ class MonthlyBalanceView extends Component {
         this.state = {
             income: 0,
             budget: 0,
-            month: this.props.match.params.id
+            month: this.props.match.params.id,
+            disabled:false
         }
 
         this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -29,13 +30,16 @@ class MonthlyBalanceView extends Component {
         let { month } = this.state;
         const update = {
             income: Number(this.state.income),
-            budget: Number(this.state.budget)
+            budget: Number(this.state.budget),
+            
         };
         updateIncomeAndBudget(year, month, update)
             .then((res => {
                 toastr.success('Income and Budget are updated!');
                 this.props.history.push('/yearly');
             }))
+            this.state.disabled=true;
+            
     }
 
     setIncomeAndBudget() {
@@ -61,6 +65,7 @@ class MonthlyBalanceView extends Component {
     onSubmitHandler(e) {
         e.preventDefault();
         this.update();
+        
     }
 
     render() {
@@ -109,7 +114,7 @@ class MonthlyBalanceView extends Component {
                                             <form onSubmit={this.onSubmitHandler}>
                                                 <div className="form-group">
                                                     <label className="form-control-label" htmlFor="income">Income:</label>
-                                                    <input onChange={this.onChangeHandler} className="form-control" value={this.state.income} name="income" type="number" />
+                                                    <input onChange={this.onChangeHandler} className="form-control" disabled={this.state.disabled} value={this.state.income} name="income" type="number" />
                                                 </div>
                                                 <div className="form-group">
                                                     <label className="form-control-label" htmlFor="budget">Budget:</label>
@@ -121,7 +126,7 @@ class MonthlyBalanceView extends Component {
                                         <div className="col-md-8 space-top">
                                             <div className="row">
                                                 <h4 className="col-md-9">Expenses</h4>
-                                                <Link to={`/addexpense/${month}`} className="btn btn-secondary ml-2 mb-2">Add expenses</Link>
+                                                <Link to={`/addexpense/${month}`} data-title-add="Натиснете тук ако желаете да добавите разход!" className="btn btn-success ml-2 mb-2">Add expenses <img id="addBtn" src="https://cdn1.iconfinder.com/data/icons/mix-color-3/502/Untitled-43-512.png"/></Link>
                                             </div>
                                             <table className="table">
                                                 <thead>

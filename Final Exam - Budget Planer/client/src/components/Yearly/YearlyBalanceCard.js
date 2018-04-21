@@ -43,8 +43,9 @@ class YearlyBalanceCard extends Component {
                             <div className="space-top">
                                 <Link to={`/monthly/${month}`}className="btn btn-secondary">Details</Link>
                             </div>
-                            {balance>=0 ? <div class="alert alert-success" role="alert"><p class="text-center">Положителен баланс</p></div> : <div class="alert alert-danger" role="alert"> <p class="text-center">Отрицателен баланс</p></div>}
+                           
                         </blockquote>
+                        {balance>=0 ? <div class="alert alert-success" role="alert"><p class="text-center">Положителен баланс!</p></div> : <div class="alert alert-danger" role="alert"> <p class="text-center">Отрицателен баланс!</p></div>}
                     </div>
                 </div>
             </div>

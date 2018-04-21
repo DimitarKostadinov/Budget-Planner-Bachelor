@@ -32,7 +32,11 @@ class AddExpense extends Component {
             category: this.state.category,
             amount: Number(this.state.cost)
         };
-        if (expense.amount < 0) {
+        if(expense.name.length == 0){
+            toastr.error('The name of the expense must be at least 1 character long!');
+            return;
+        }
+        if (expense.amount <= 0) {
             toastr.error('The cost of the expense must be a positive number!');
             return;
         }
@@ -87,6 +91,8 @@ class AddExpense extends Component {
                                 <option>Non-essential</option>
                                 <option>Fixed</option>
                                 <option>Variable</option>
+                                <option>Food</option>
+                                <option>Bill</option>
                             </select>
                         </div>
                         <div className="form-group">
