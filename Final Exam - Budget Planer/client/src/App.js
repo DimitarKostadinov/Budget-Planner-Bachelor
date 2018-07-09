@@ -47,7 +47,7 @@ class App extends Component {
                 <footer className="footer">
                         <p>Дипломен проект изработен от Димитър Костадинов Димитров</p>
                         <span>ТУ-София 2018г.</span>
-                    </footer>
+                </footer>
             </main>
         );
     }

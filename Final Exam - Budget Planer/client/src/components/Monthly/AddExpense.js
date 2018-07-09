@@ -73,20 +73,20 @@ class AddExpense extends Component {
             <div className="container">
             <div className="row space-top">
                 <div className="col-md-12">
-                    <h1>Add Expenses</h1>
-                    <h3>{monthName[month]} {year}</h3>
+                    <h1 id="expense-add">Add Expenses</h1>
+                    <h3 id="expense-add">{monthName[month]} {year}</h3>
                 </div>
             </div>
             <div className="row space-top">
                 <div className="col-md-10">
                     <form onSubmit={this.onSubmitHandler}>
-                        <legend>Add a new expense</legend>
+                        <legend id="expense-add">Add a new expense</legend>
                         <div className="form-group">
-                            <label className="col-md-2" htmlFor="name">Name:</label>
+                            <label className="col-md-2" id="expense-addField" htmlFor="name">Name:</label>
                             <input onChange={this.onChangeHandler} className="col-md-2" name="name" type="text"/>
                         </div>
                         <div className="form-group">
-                            <label className="col-md-2" htmlFor="category">Category:</label>
+                            <label className="col-md-2" id="expense-addField" htmlFor="category">Category:</label>
                             <select onChange={this.onChangeHandler} value={this.state.category} className="col-md-2 pl-2" name="category">
                                 <option>Non-essential</option>
                                 <option>Fixed</option>
@@ -96,14 +96,14 @@ class AddExpense extends Component {
                             </select>
                         </div>
                         <div className="form-group">
-                            <label className="col-md-2" htmlFor="cost">Cost:</label>
+                            <label className="col-md-2" id="expense-addField" htmlFor="cost">Cost:</label>
                             <input onChange={this.onChangeHandler} className="col-md-2" name="cost" type="number"/>
                         </div>
                         <div className="form-group">
-                            <label className="col-md-2" htmlFor="paymentDate">Payment Date:</label>
+                            <label className="col-md-2" id="expense-addField" htmlFor="paymentDate">Payment Date:</label>
                             <input onChange={this.onChangeHandler} className="col-md-2" name="paymentDate" type="number"/>
                         </div>
-                        <input type="submit" className="btn btn-secondary" value="Add"/>
+                        <input type="submit" className="btn btn-success" value="Add Expense"/>
                     </form>
                 </div>
             </div>

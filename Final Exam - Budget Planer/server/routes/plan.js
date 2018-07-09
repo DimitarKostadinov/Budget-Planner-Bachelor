@@ -20,7 +20,7 @@ module.exports = {
         }
 
         const result = planner.createPlan(req.user.email, plan);
-
+		console.log(plan);
         console.log('Plan saved.');
         res.status(200).json({
             success: true,

@@ -16,13 +16,13 @@ export default class Header extends Component {
                                 {loggedIn && <NavLink className="nav-link" exact to={`/monthly/${currentMonth}`}>Monthly Balance</NavLink>}
                                 {loggedIn && <NavLink className="nav-link"  to="/yearly">Yearly Balance</NavLink>}
                                 
-                                {!loggedIn &&<NavLink className="nav-link" to="/login"> <p className="text-info login">Login</p></NavLink>}
-                                {!loggedIn &&<NavLink className="nav-link" to="/register"><p className="text-success register">Register</p></NavLink>}
+                                {!loggedIn &&<NavLink className="nav-link" to="/login"> <p className="text-dark login">Login</p></NavLink>}
+                                {!loggedIn &&<NavLink className="nav-link" to="/register"><p className="text-dark register">Register</p></NavLink>}
                             </div>
-                            {!loggedIn &&<h1><p className="text-center" className="text-primary welcomeMessage">Добре дошли в Бюджетния Планер!</p></h1>}
+                            {!loggedIn &&<h1><p className="text-center" className="text-dark welcomeMessage">Добре дошли в Бюджетния Планификатор!</p></h1>}
                         </div>
                         <div className="row">
-                        {loggedIn &&<p className="nav-link userName">Добре дошъл, {localStorage.getItem('name')}!</p>}
+                        {loggedIn &&<p className="nav-link userName">Welcome, {localStorage.getItem('name')}!</p>}
                         {loggedIn &&<a onClick={onLogout} href="javascript:void(0)" className="nav-link logout">Logout</a>}
                         </div>
                     </div>

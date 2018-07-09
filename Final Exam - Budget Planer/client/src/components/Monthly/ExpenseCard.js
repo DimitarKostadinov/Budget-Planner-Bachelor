@@ -33,7 +33,6 @@ class ExpenseCard extends Component {
                     <a onClick={() => {
                         deleteExpense(id)
                         .then((res => {
-                            console.log(res);
                             toastr.success('Expense deleted successfully!');
                             this.props.history.push('/yearly');
                         }))

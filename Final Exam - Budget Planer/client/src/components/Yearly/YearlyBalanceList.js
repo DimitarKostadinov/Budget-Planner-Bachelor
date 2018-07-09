@@ -28,7 +28,7 @@ class YearlyBalanceList extends Component {
         return (
             <div className="container">
                 <div className="row space-top">
-                    <div className="col-md-12">
+                    <div className="col-md-12 centered-headers">
                         <h1>Yearly Balance</h1>
                     </div>
                 </div>

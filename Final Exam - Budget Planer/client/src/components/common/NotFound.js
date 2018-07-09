@@ -6,9 +6,13 @@ export default class NotFound extends Component {
             <main>
                 <div className="container">
                     <div className="row space-top">
-                        <div className="col-md-12">
-                            <h1>404: Page not found!</h1>
-                        </div>
+                        <section id="fourohfour">
+                        <div class='img'></div>
+                            <div class='text'>
+                                <h1>Error 404! This page does not exist!</h1>
+                            </div>
+                        </section>
+                        
                     </div>
                 </div>
             </main>

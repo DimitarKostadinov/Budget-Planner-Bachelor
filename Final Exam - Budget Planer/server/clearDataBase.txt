@@ -1,0 +1,1 @@
+{"1":{"budget":0,"balance":0},"2":{"budget":0,"balance":0},"3":{"budget":0,"balance":0},"4":{"budget":0,"balance":0},"5":{"budget":0,"balance":0},"6":{"budget":2000,"balance":600},"7":{"budget":0,"balance":0},"8":{"budget":0,"balance":0},"9":{"budget":0,"balance":0},"10":{"budget":0,"balance":0},"11":{"budget":0,"balance":0},"12":{"budget":0,"balance":0}}

@@ -20,7 +20,7 @@ module.exports = {
         }
 
         const result = planner.createExpense(req.user.email, expense);
-
+		console.log(expense);
         console.log('Expense saved.');
         res.status(200).json({
             success: true,
@@ -39,7 +39,7 @@ module.exports = {
                 errors: { id: "Expense ID not found: " + id }
             });
         }
-        console.log("Expense deleted.");
+        console.log(`Expense with id:${id} was deleted.`);
         res.status(200).json({
             success: true,
             message: 'Expense deleted successfuly.',
