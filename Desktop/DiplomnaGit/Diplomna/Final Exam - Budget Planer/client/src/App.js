@@ -42,7 +42,12 @@ class App extends Component {
                         <Route path="/register" component={RegisterPage} />
                         <Route component={NotFound} />
                     </Switch>
+                    
                 </div>
+                <footer className="footer">
+                        <p>Дипломен проект изработен от Димитър Костадинов Димитров</p>
+                        <span>ТУ-София 2018г.</span>
+                </footer>
             </main>
         );
     }

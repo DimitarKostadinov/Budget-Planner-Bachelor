@@ -34,7 +34,7 @@ class RegisterPage extends Component {
             return;
         }
         if (this.state.password !== this.state.repeat) {
-            toastr.error('Passwod should match!');
+            toastr.error('Password should match!');
             return;
         }
         if (this.state.password.length < 4) {
@@ -67,19 +67,17 @@ class RegisterPage extends Component {
                         <div className="form-group has-success">
                             <label className="form-control-label" htmlFor="new-email">E-mail</label>
                             <input onChange={this.onChangeHandler} name="email" className="form-control is-valid" id="new-email" type="text"/>
-                            <div className="form-control-feedback">This input value is valid</div>
+                            <div className="form-control-feedback">Please enter a valid e-mail!</div>
                         </div>
                         <div className="form-group has-danger">
                             <label className="form-control-label" htmlFor="new-password">Password</label>
                             <input onChange={this.onChangeHandler} name="password" className="form-control" id="new-password" type="password"/>
-                            {/* <div className="form-control-feedback">This input value is invalid</div> */}
                         </div>
                         <div className="form-group has-danger">
                             <label className="form-control-label" htmlFor="new-repeat-password">Repeat password</label>
                             <input onChange={this.onChangeHandler} name="repeat" className="form-control" id="new-repeat-password" type="password"/>
-                            {/* <div className="form-control-feedback">This input value is invalid</div> */}
                         </div>
-                        <input type="submit" className="btn btn-secondary" value="Register"/>
+                        <input type="submit" className="btn btn-success" value="Register"/>
                     </div>
                 </div>
             </form>

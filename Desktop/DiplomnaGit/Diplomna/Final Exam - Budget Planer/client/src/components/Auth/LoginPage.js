@@ -44,6 +44,8 @@ class LoginPage extends Component {
                 localStorage.setItem('name', res.user.name);
                 toastr.success('Login successful!');
                 this.props.history.push(`/monthly/${currentMonth}`);
+            }else{
+                toastr.error('Invalid username or password');
             }
         })
     }
@@ -53,7 +55,7 @@ class LoginPage extends Component {
             <div className="container">
                 <div className="row space-top">
                     <div className="col-md-12">
-                        <h1>Login here</h1>
+                        <h1>Login</h1>
                     </div>
                 </div>
                 <form onSubmit={this.onSubmitHandler}>
